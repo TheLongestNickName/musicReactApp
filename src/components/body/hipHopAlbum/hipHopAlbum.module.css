@@ -1,0 +1,19 @@
+.wrap{
+    display: flex;
+    width: 1070px;
+    margin: 0 auto;
+    background: black;
+    flex-flow: wrap;
+    color: white;
+
+}
+.album{
+    border: 1px solid white;
+    margin: 5px;
+    color: white;
+    width: 200px;
+}
+.imgs{
+    width: 200px;
+    height: 200px;
+}

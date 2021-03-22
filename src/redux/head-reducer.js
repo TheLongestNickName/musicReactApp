@@ -21,7 +21,7 @@ const initialState = {
         {name:'1'},
         {name:'2'},
         {name:'3'},
-        ],
+    ],
 
 }
 
@@ -48,8 +48,11 @@ export const setDataCreator = (data)=>{
     }
 }
 
-export const getPopularAlbum = (name)=>{
+export const getPopularAlbum =  (name, history)=>{
     return (dispatch)=>{
-        AlbumApi.getPopularAlbum(name).then(data => dispatch(setDataCreator(data)))
+        AlbumApi.getPopularAlbum(name).then(data => {
+            dispatch(setDataCreator(data));
+            history.push(name)
+        })
     }
 }

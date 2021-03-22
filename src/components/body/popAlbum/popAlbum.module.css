@@ -1,6 +1,6 @@
 .wrap{
     display: flex;
-    width: 1040px;
+    width: 1070px;
     margin: 0 auto;
     background: black;
     flex-flow: wrap;
@@ -10,6 +10,7 @@
 .album{
     border: 1px solid white;
     margin: 5px;
+    color: white;
 }
 .imgs{
     width: 200px;

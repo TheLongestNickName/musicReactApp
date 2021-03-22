@@ -3,7 +3,12 @@ import './App.css';
 import HeaderContainer from "./components/header/headerContainer";
 import {BrowserRouter, Route} from "react-router-dom";
 import MainPageContainer from "./components/body/mainPage/MainPageContainer";
-import PopularAlbumsContainer from "./components/body/popAlbum/popularAlbum";
+import Electro from "./components/body/electroAlbum/electro";
+import RockAlbum from "./components/body/rockAlbum/RockAlbum";
+import RandBAlbum from "./components/body/RandB/RandBAlbum";
+import IndiaAlbum from "./components/body/indiaAlbum/indiaAlbum";
+import PopAlbum from "./components/body/popAlbum/popAlbum";
+import HipHopAlbum from "./components/body/hipHopAlbum/hipHopAlbum";
 
 function App() {
   return (
@@ -16,14 +21,24 @@ function App() {
                     <Route exact path={"/home"}  render={()=>{
                         return <MainPageContainer/>
                     }}/>
-                <Route path={'/Rock'} render={()=>{
-                    return <PopularAlbumsContainer/>
-                }}/>
-                {/*<Route path={'/Electro'}/>*/}
-                {/*<Route path={'/Hip_hop'}/>*/}
-                {/*<Route path={'/Pop'}/>*/}
-                {/*<Route path={'/R&B'}/>*/}
-                {/*<Route path={'/Indie'}/>*/}
+                    <Route path={'/Rock'} render={()=>{
+                        return <RockAlbum/>
+                    }}/>
+                    <Route path={'/Electro'} render={()=>{
+                        return <Electro/>
+                    }}/>
+                    <Route path={'/R&B'} render={()=>{
+                            return <RandBAlbum/>
+                    }}/>
+                    <Route path={'/Indie'} render={()=>{
+                            return <IndiaAlbum/>
+                    }}/>
+                    <Route path={'/Hip-hop'} render={()=>{
+                            return <HipHopAlbum/>
+                    }}/>
+                    <Route path={'/Pop'} render={()=>{
+                            return <PopAlbum/>
+                    }}/>
                 </div>
           </div>
       </BrowserRouter>

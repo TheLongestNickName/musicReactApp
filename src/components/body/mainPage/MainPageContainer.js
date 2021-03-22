@@ -7,12 +7,7 @@ let MainPageContainer = (props)=>{
 
     const history = useHistory()
     function handleClick (name){
-        props.getPopularAlbum(name)
-        props.getPopularAlbum(name)
-        if (props.data){
-            history.push(name)
-        }
-        else return
+        props.getPopularAlbum(name, history)
     }
     return(
         <div className={s.wrap}>
@@ -31,7 +26,6 @@ let MainPageContainer = (props)=>{
 let mapStateToProps = (state)=>{
     return {
         albums : state.album.genry,
-        data : state.album.albumData.albums.album
     }
 }
 

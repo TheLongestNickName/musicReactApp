@@ -11,7 +11,7 @@ const instance = axios.create({
 
 export const AlbumApi = {
     getPopularAlbum (name){
-        return instance.get(`?method=tag.gettopalbums&tag=rock&api_key=153237df360dc9d3299c5d12048620c0&format=json`).then(response =>{
+        return instance.get(`?method=tag.gettopalbums&tag=${name}&api_key=153237df360dc9d3299c5d12048620c0&format=json`).then(response =>{
             return response.data
         })
     }
