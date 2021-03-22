@@ -1,0 +1,18 @@
+.wrap{
+    /*border: 1px solid black;*/
+    position: relative;
+    width: 80px;
+}
+.count{
+    position: absolute;
+    right: 13px;
+    top: 1px;
+    width: 20px;
+    border-radius: 15px;
+    background: blue;
+    color: white;
+    text-align: center;
+}
+.img{
+    width: 80px;
+}

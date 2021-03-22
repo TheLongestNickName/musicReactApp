@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+
 import './App.css';
+import HeaderContainer from "./components/header/headerContainer";
+import {BrowserRouter, Route} from "react-router-dom";
+import MainPageContainer from "./components/body/mainPage/MainPageContainer";
+import PopularAlbumsContainer from "./components/body/popAlbum/popularAlbum";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <div className="App">
+              <div >
+                  <HeaderContainer/>
+              </div>
+                <div>
+                    <Route exact path={"/home"}  render={()=>{
+                        return <MainPageContainer/>
+                    }}/>
+                <Route path={'/Rock'} render={()=>{
+                    return <PopularAlbumsContainer/>
+                }}/>
+                {/*<Route path={'/Electro'}/>*/}
+                {/*<Route path={'/Hip_hop'}/>*/}
+                {/*<Route path={'/Pop'}/>*/}
+                {/*<Route path={'/R&B'}/>*/}
+                {/*<Route path={'/Indie'}/>*/}
+                </div>
+          </div>
+      </BrowserRouter>
   );
 }
 
